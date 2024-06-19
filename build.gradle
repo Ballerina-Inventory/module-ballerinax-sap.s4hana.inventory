@@ -16,7 +16,7 @@
  * under the License.
  */
 
-description = 'Ballerina - SAP S/4HANA Sourcing and Procurement APIs'
+description = 'Ballerina - SAP S/4HANA Inventory APIs'
 
 ext.ballerinaLangVersion = project.ballerinaLangVersion
 
@@ -59,6 +59,6 @@ task clean {
 }
 
 task build {
-    dependsOn(':procurement-ballerina:build')
-    dependsOn(':procurement-examples:build')
+    dependsOn(':inventory-ballerina:build')
+    dependsOn(':inventory-examples:build')
 }

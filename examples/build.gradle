@@ -46,7 +46,7 @@ task testExamples {
 
 task buildExamples {
     gradle.taskGraph.whenReady { graph ->
-        if (graph.hasTask(":sap.s4hana.sales-examples:test")) {
+        if (graph.hasTask(":sap.s4hana.inventory-examples:test")) {
             buildExamples.enabled = false
         } else {
             testExamples.enabled = false
@@ -70,7 +70,7 @@ task buildExamples {
     }
 }
 
-buildExamples.dependsOn ":procurement-ballerina:build"
-testExamples.dependsOn ":procurement-ballerina:build"
+buildExamples.dependsOn ":inventory-ballerina:build"
+testExamples.dependsOn ":inventory-ballerina:build"
 test.dependsOn testExamples
 build.dependsOn buildExamples
